@@ -1,6 +1,8 @@
 package br.com.gilaguiar.devshowcase.entity;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "profiles")
@@ -22,6 +24,17 @@ public class Profile {
     private String githubUrl;
 
     private String linkedinUrl;
+    
+    @OneToMany(mappedBy = "profile")
+    private List<Project> projects = new ArrayList<>();
+    
+    public List<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(List<Project> projects) {
+        this.projects = projects;
+    }
 
     public Profile() {
     }
