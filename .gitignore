@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Logs ###
+*.log
+
+### Sistema Operacional ###
+.DS_Store
+Thumbs.db

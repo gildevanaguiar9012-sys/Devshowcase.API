@@ -1,0 +1,55 @@
+### Cadastrar perfil
+POST http://localhost:8081/api/profiles
+Content-Type: application/json
+
+{
+  "name": "Gildevan de Aguiar Rego",
+  "email": "gildevan@email.com",
+  "bio": "Estudante de Sistemas para Internet",
+  "githubUrl": "https://github.com/gildevanaguiar9012-sys",
+  "linkedinUrl": "https://linkedin.com/in/exemplo"
+}
+
+
+### Buscar perfil pelo ID
+GET http://localhost:8081/api/profiles/1
+
+
+### Cadastrar tecnologia - Java
+POST http://localhost:8081/api/technologies
+Content-Type: application/json
+
+{
+  "name": "Java"
+}
+
+
+### Cadastrar tecnologia - Spring Boot
+POST http://localhost:8081/api/technologies
+Content-Type: application/json
+
+{
+  "name": "Spring Boot"
+}
+
+
+### Listar tecnologias
+GET http://localhost:8081/api/technologies
+
+
+### Cadastrar projeto
+POST http://localhost:8081/api/projects
+Content-Type: application/json
+
+{
+  "title": "P2 Conecta",
+  "description": "Portal web para divulgação turística e de serviços de Pedro II",
+  "repositoryUrl": "https://github.com/gildevanaguiar9012-sys/p2-conecta",
+  "demoUrl": "https://exemplo.com",
+  "profileId": 1,
+  "technologyIds": [1, 2]
+}
+
+
+### Listar projetos
+GET http://localhost:8081/api/projects
